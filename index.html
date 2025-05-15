@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KumbhBot</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>KumbhBot</h1>
+    <p>Your Guide to Nashik Kumbh Mela 2027</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#rituals">Rituals</a></li>
+      <li><a href="#attractions">Attractions</a></li>
+      <li><a href="#languages">Languages</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>🕉️ About Kumbh Mela</h2>
+      <p>The Nashik Kumbh Mela is one of the world's largest spiritual events, held every 12 years at the sacred Trimbakeshwar and the Godavari River.</p>
+    </section>
+
+    <section id="rituals">
+      <h2>🛕 Sacred Rituals</h2>
+      <ul>
+        <li>Shahi Snan</li>
+        <li>Peshwai Processions</li>
+        <li>Spiritual Discourses</li>
+        <li>Sadhu Gatherings</li>
+      </ul>
+    </section>
+
+    <section id="attractions">
+      <h2>🗺️ Nearby Attractions</h2>
+      <ul>
+        <li>Trimbakeshwar Jyotirlinga</li>
+        <li>Panchavati</li>
+        <li>Muktidham Temple</li>
+        <li>Anjneri Hills</li>
+      </ul>
+    </section>
+
+    <section id="languages">
+      <h2>🌐 Multilingual Help</h2>
+      <p>Get assistance in English, Hindi, or Marathi to explore Kumbh Mela better.</p>
+    </section>
+  </main>
+
+  <div id="chatbot-icon">💬</div>
+  <div id="chatbot-container" class="hidden">
+    <div id="chatbot-header">
+      <span>KumbhBot</span>
+      <button id="close-btn">&times;</button>
+    </div>
+    <div id="chatbot-body">
+      <div id="chatbot-messages"></div>
+    </div>
+    <div id="chatbot-input-container">
+
+      <input type="text" id="chatbot-input" placeholder="Type a message" />
+      <button onclick="startVoice()"> 🎙️ </button>
+
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
