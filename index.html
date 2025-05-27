@@ -1,83 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KumbhBot — Your 24×7 AI Guide to Nashik Kumbh Mela 2027</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KumbhBot - Nashik Kumbh Mela 2027</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Mukta', sans-serif;
+      background-color: #fffdf5;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-orange-600 text-white text-center py-6 border-b-4 border-orange-800">
+    <h1 class="text-4xl font-bold">KumbhBot</h1>
+    <p class="text-lg">Your Guide to Nashik Kumbh Mela 2027</p>
+  </header>
 
-    <!-- TailwindCSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <nav class="bg-orange-100 py-4 shadow-md">
+    <ul class="flex justify-center space-x-6 flex-wrap">
+      <li><a href="#" class="text-orange-800 font-bold hover:underline">Home</a></li>
+      <li><a href="#schedule" class="text-orange-800 font-bold hover:underline">Schedule</a></li>
+      <li><a href="#travel" class="text-orange-800 font-bold hover:underline">Travel</a></li>
+      <li><a href="#stay" class="text-orange-800 font-bold hover:underline">Accommodation</a></li>
+      <li><a href="#contact" class="text-orange-800 font-bold hover:underline">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="icon.png" type="image/x-icon" />
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="KumbhBot is your multilingual 24x7 AI guide for the Nashik Kumbh Mela 2027 — from rituals and accommodation to travel and emergency help." />
-    <meta name="keywords" content="Kumbh Mela, Nashik 2027, AI Guide, Trimbakeshwar, Pilgrimage, Hindu Event" />
-    <meta name="author" content="TechDaft Solutions" />
-  </head>
-
-  <body class="bg-gradient-to-br from-orange-100 to-yellow-50 font-[Mukta]">
-    <!-- Header Section -->
-    <header class="text-center py-10">
-      <h1 class="text-4xl md:text-6xl font-bold text-orange-700 drop-shadow-md">🕉️ KumbhBot</h1>
-      <p class="text-lg text-gray-700">Your 24×7 AI Guide to Nashik Kumbh Mela 2027</p>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav class="flex justify-center space-x-4 flex-wrap bg-white bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow-xl mx-auto w-max">
-      <a href="accommodation.html" class="text-orange-700 hover:underline">Accommodation</a>
-      <a href="event-schedule.html" class="text-orange-700 hover:underline">Schedule</a>
-      <a href="how-to-reach.html" class="text-orange-700 hover:underline">How To Reach</a>
-      <a href="emergency.html" class="text-orange-700 hover:underline">Emergency</a>
-      <a href="dos-donts.html" class="text-orange-700 hover:underline">Do’s & Don’ts</a>
-      <a href="eco-tips.html" class="text-orange-700 hover:underline">Eco Tips</a>
-      <a href="food-prasad.html" class="text-orange-700 hover:underline">Food & Prasad</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="text-center mt-12">
-      <div class="max-w-4xl mx-auto px-4" data-tilt data-tilt-max="5" data-tilt-speed="400">
-        <img src="hero-kumbh.png" alt="Kumbh Mela Hero Image" class="rounded-3xl shadow-2xl mx-auto" />
-      </div>
-      <h2 class="text-2xl font-semibold text-orange-800 mt-6">Explore the Divine Gathering with Ease & Insight</h2>
-      <p class="text-gray-600 mt-2">KumbhBot helps you navigate rituals, find stays, track events, and get emergency support — anytime, in your language.</p>
+  <main class="p-6">
+    <section class="mb-10 bg-white border-l-4 border-orange-400 p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold text-orange-800 mb-2">About Kumbh Mela</h2>
+      <p>The Kumbh Mela in Nashik is one of the largest spiritual gatherings on Earth, held every 12 years. It is a time of devotion, rituals, and cultural celebration attracting millions of pilgrims.</p>
     </section>
 
-    <!-- Info Cards -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 px-6 md:px-16">
-      <div class="bg-white bg-opacity-80 p-6 rounded-2xl shadow-xl hover:scale-105 transform transition" data-tilt>
-        <h3 class="text-xl font-bold text-orange-700">🛕 Rituals & Bathing Dates</h3>
-        <p class="text-sm text-gray-700 mt-2">Learn about Shahi Snan, Peshwai Processions, Pravachans, and Sadhu Darshan.</p>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow-xl transform transition duration-500 hover:scale-105" data-tilt>
+        <h3 class="text-xl font-bold text-orange-700 mb-2">Event Schedule</h3>
+        <p>Know all the key dates, shahi snaan, and major rituals of the Nashik Kumbh Mela 2027.</p>
       </div>
-      <div class="bg-white bg-opacity-80 p-6 rounded-2xl shadow-xl hover:scale-105 transform transition" data-tilt>
-        <h3 class="text-xl font-bold text-orange-700">🛌 Accommodation</h3>
-        <p class="text-sm text-gray-700 mt-2">Options from dharamshalas to hotels — find the right stay at the right price.</p>
+      <div class="bg-white p-6 rounded-xl shadow-xl transform transition duration-500 hover:scale-105" data-tilt>
+        <h3 class="text-xl font-bold text-orange-700 mb-2">How to Reach</h3>
+        <p>Plan your travel to Nashik with detailed transportation guidance.</p>
       </div>
-      <div class="bg-white bg-opacity-80 p-6 rounded-2xl shadow-xl hover:scale-105 transform transition" data-tilt>
-        <h3 class="text-xl font-bold text-orange-700">🚆 Travel Info</h3>
-        <p class="text-sm text-gray-700 mt-2">Buses, trains, airports — all routes to Nashik covered.</p>
+      <div class="bg-white p-6 rounded-xl shadow-xl transform transition duration-500 hover:scale-105" data-tilt>
+        <h3 class="text-xl font-bold text-orange-700 mb-2">Stay & Food</h3>
+        <p>Find nearby accommodation options and where to enjoy prasad and local delicacies.</p>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="mt-20 py-6 bg-orange-100 text-center text-sm text-gray-600">
-      <p>🙏 Powered by <strong>TechDaft</strong> | <a href="mailto:hello@techdaft.in" class="text-orange-600 hover:underline">Contact Us</a></p>
-      <p>© 2025 <strong>KumbhBot</strong>. All rights reserved.</p>
-    </footer>
+    <section class="mt-10 bg-white border-l-4 border-orange-400 p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold text-orange-800 mb-2">Latest Updates</h2>
+      <ul class="list-disc list-inside">
+        <li>Next Shahi Snan: April 14, 2027</li>
+        <li>Online Darshan Facility will open from March 2027</li>
+        <li>New AI-powered chatbot experience added</li>
+      </ul>
+    </section>
+  </main>
 
-    <!-- Vanilla Tilt Init -->
-    <script>
-      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-        max: 10,
-        speed: 500,
-        glare: true,
-        "max-glare": 0.2
-      });
-    </script>
-  </body>
+  <footer class="text-center py-6 bg-orange-100 border-t border-orange-200 text-sm">
+    &copy; 2025 KumbhBot. Created by <a href="https://techdaft.com" class="text-orange-700 font-bold hover:underline">TechDaft Solutions</a>.
+  </footer>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3,
+    });
+  </script>
+
+  <!-- Tawk.to Live Chat Widget -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/65f3bcd28d261e1b5f6dd81b/1hpflsl1b';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+</body>
 </html>
