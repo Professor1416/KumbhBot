@@ -34,6 +34,6 @@ KumbhBot/
 - 🆘 **Emergency Resources** – Police, ambulance, helplines
 - 🧘 **Spiritual Guidance** – Do’s, don’ts, eco-travel tips
 - 🌐 **Multilingual** – English, Hindi, Marathi (and more coming!)
-- 🤖 **Live Chat Support** – Integrated Tawk.to chatbot
+- 🤖 **Live Chat Support** – Integrated chatbot
 
 ---
