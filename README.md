@@ -10,17 +10,29 @@
 
 KumbhBot/
 ├── index.html # Main homepage
+
 ├── accommodation.html # Accommodation info
+
 ├── event-schedule.html # Daily rituals & bathing dates
+
 ├── how-to-reach.html # Travel directions to Nashik
+
 ├── emergency.html # Emergency contacts
+
 ├── dos-donts.html # Safety and behavior guidelines
+
 ├── eco-tips.html # Eco-friendly travel advice
+
 ├── food-prasad.html # Local food and prasad info
+
 ├── style.css # Common stylesheet
+
 ├── script.js # (Optional) Interactivity scripts
+
 ├── sitemap.xml # Sitemap for search engines
+
 ├── robots.txt # Crawler instructions
+
 └── README.md # You're reading it now!
 
 
