@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KumbhBot - Event Schedule</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Kumbh Mela 2027 - Event Schedule</h1>
+    <p>Stay updated with all key rituals and events</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>📅 Key Ritual Dates</h2>
+      <table border="1">
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>July 14, 2027</td>
+          <td>First Shahi Snan</td>
+          <td>Royal bathing ritual by Akharas</td>
+        </tr>
+        <tr>
+          <td>July 27, 2027</td>
+          <td>Second Shahi Snan</td>
+          <td>Most auspicious day for spiritual cleansing</td>
+        </tr>
+        <tr>
+          <td>August 11, 2027</td>
+          <td>Third Shahi Snan</td>
+          <td>Final and grandest spiritual gathering</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>⏳ Countdown to First Snan</h2>
+      <div id="countdown"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by KumbhBot | <a href="index.html">Back to Home</a></p>
+  </footer>
+
+  <script>
+    // Simple countdown
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("2027-07-14T00:00:00").getTime();
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance < 0) {
+        countdown.innerHTML = "🕉️ The event has begun!";
+        clearInterval(interval);
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      countdown.innerHTML = `${days} days left for First Snan`;
+    }, 1000);
+  </script>
+</body>
+</html>
