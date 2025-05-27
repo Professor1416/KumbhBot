@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/accommodation.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/event-schedule.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/how-to-reach.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/emergency.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/dos-donts.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/eco-tips.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://professor1416.github.io/KumbhBot/food-prasad.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
