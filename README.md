@@ -9,6 +9,7 @@
 ## 📁 Project Structure
 
 KumbhBot/
+
 ├── index.html # Main homepage
 
 ├── accommodation.html # Accommodation info
