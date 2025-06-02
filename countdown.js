@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set the Kumbh Mela start date
   const eventDate = new Date("2027-02-12T00:00:00").getTime(); // Update the date if needed
 
-  const timer = document.getElementById("timer");
+  const timer = document.getElementById("countdown");
 
   function updateCountdown() {
     const now = new Date().getTime();
