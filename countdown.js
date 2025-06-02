@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Set the Kumbh Mela start date
-  const eventDate = new Date("2027-02-12T00:00:00").getTime(); // Update the date if needed
+  // Set the date for the first Shahi Snan (2 August 2027)
+  const eventDate = new Date("2027-08-02T00:00:00").getTime();
 
   const timer = document.getElementById("countdown");
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const distance = eventDate - now;
 
     if (distance <= 0) {
-      timer.innerHTML = "🙏 The Kumbh Mela has begun!";
+      timer.innerHTML = "🙏 The first Shahi Snan has begun!";
       clearInterval(countdownInterval);
       return;
     }
