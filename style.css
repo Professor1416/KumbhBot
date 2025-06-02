@@ -29,7 +29,6 @@ header {
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 5px;
-  animation: bounce 2s infinite;
 }
 
 header p {
@@ -95,7 +94,6 @@ main section:hover {
 main h2 {
   color: #e65100;
   margin-bottom: 10px;
-  animation: pulse 1.5s infinite alternate;
 }
 
 main ul {
@@ -138,7 +136,6 @@ footer a:hover {
   color: white;
   cursor: pointer;
   border-radius: 5px;
-  animation: pulse 2s infinite;
 }
 
 /* Calendar Links */
@@ -150,7 +147,6 @@ footer a:hover {
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  animation: glow 3s infinite;
 }
 
 .calendar-links a:hover {
@@ -162,7 +158,6 @@ footer a:hover {
   text-align: center;
   background: #f9f9f9;
   padding: 1em 0;
-  animation: bounce 2s infinite;
 }
 
 #timer {
@@ -174,6 +169,20 @@ footer a:hover {
 #official-dates {
   background-color: #f0f8ff;
   padding: 1.5em;
+}
+
+/* Glow Effect */
+.glow-effect {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff9800, 0 0 10px #ff9800, 0 0 15px #ff5722;
+  }
+  to {
+    text-shadow: 0 0 10px #ffcc80, 0 0 20px #ff9800, 0 0 25px #ff5722;
+  }
 }
 
 /* Scrollbar Styling */
@@ -189,36 +198,6 @@ footer a:hover {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #e65100;
-}
-
-/* Attention-Grabbing Animations */
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px #ff9800, 0 0 10px #ff9800, 0 0 15px #ff5722;
-  }
-  100% {
-    box-shadow: 0 0 15px #ffcc80, 0 0 20px #ff9800, 0 0 25px #ff5722;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.85;
-  }
-  100% {
-    transform: scale(1.08);
-    opacity: 1;
-  }
 }
 
 /* Responsive */
