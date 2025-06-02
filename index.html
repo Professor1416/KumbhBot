@@ -4,31 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KumbhBot – Your 24×7 AI Guide to Nashik Kumbh Mela 2027</title>
-
-  <!-- ✅ Favicon -->
   <link rel="icon" href="icon.png" type="image/x-icon" />
-
-  <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="KumbhBot is your multilingual 24x7 AI guide for the Nashik Kumbh Mela 2027 – from rituals and accommodation to travel, events, and emergency help." />
-  <meta name="keywords" content="Kumbh Mela, Nashik 2027, KumbhBot, Trimbakeshwar, Hindu Pilgrimage, Travel Guide, AI Chatbot, Kumbh Planning, Sadhu Darshan, Spiritual Travel" />
-  <meta name="author" content="TechDaft Solutions" />
-
-  <!-- ✅ Open Graph for Social Sharing -->
-  <meta property="og:title" content="KumbhBot – AI Guide to Nashik Kumbh Mela 2027" />
-  <meta property="og:description" content="Get multilingual 24x7 assistance with KumbhBot – your smart guide for accommodation, rituals, events, and more during Nashik Kumbh Mela 2027." />
-  <meta property="og:image" content="https://yourdomain.com/assets/kumbhbot-preview.png" />
-  <meta property="og:url" content="https://professor1416.github.io/KumbhBot/" />
-  <meta property="og:type" content="website" />
-
-  <!-- ✅ Fonts and Styles -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Mukta', sans-serif; margin: 0; padding: 0; }
+    header, nav, footer { text-align: center; padding: 1em; background-color: #f0f0f0; }
+    nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1em; }
+    nav ul li { display: inline; }
+    main { padding: 1em; }
+    section { margin: 2em 0; }
+    .lang-toggle button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: none;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .calendar-links a {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .calendar-links a:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
-
 <body>
   <header>
     <h1>🕉️ KumbhBot</h1>
     <p>Your 24×7 AI Guide to Nashik Kumbh Mela 2027</p>
+    
+    <!-- 🌐 Language Toggle -->
+    <div class="lang-toggle">
+      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('hi')">हिन्दी</button>
+      <button onclick="switchLang('mr')">मराठी</button>
+    </div>
   </header>
 
   <nav>
@@ -43,68 +62,91 @@
     </ul>
   </nav>
 
+  <!-- 🕒 Countdown -->
+  <section id="countdown" style="text-align:center; background: #f9f9f9; padding: 1em 0;">
+    <h2>🕒 Countdown to First Shahi Snan – 2 August 2027</h2>
+    <p id="timer" style="font-size: 1.5rem; font-weight: bold;">Loading...</p>
+  </section>
+
+  <script>
+    const targetDate = new Date("August 2, 2027 00:00:00").getTime();
+    const timerEl = document.getElementById("timer");
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        clearInterval(countdown);
+        timerEl.innerHTML = "🚩 The Shahi Snan has begun!";
+      } else {
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+        timerEl.innerHTML = `${d}d ${h}h ${m}m ${s}s`;
+      }
+    }, 1000);
+  </script>
+
   <main>
+    <!-- 📅 Add to Calendar Links -->
+    <section class="calendar-links">
+      <h2>📅 Add Shahi Snan Dates to Your Calendar</h2>
+      <a href="snan-aug2.ics" download>Add 2 Aug 2027</a>
+      <a href="snan-aug31.ics" download>Add 31 Aug 2027</a>
+      <a href="snan-sep11.ics" download>Add 11 Sep 2027</a>
+    </section>
+
+    <!-- 📌 Official Dates -->
+    <section id="official-dates" style="background-color: #f0f8ff; padding: 1.5em;">
+      <h2>🕉️ Official Kumbh Dates</h2>
+      <ul>
+        <li><strong>ध्वजारोहण:</strong> 31 Oct 2026</li>
+        <li><strong>ध्वजारोहण (अखाड़ा):</strong> 24 July 2027</li>
+        <li><strong>पहला शाही स्नान:</strong> 2 August 2027 (Somvati Amavasya)</li>
+        <li><strong>दूसरा शाही स्नान:</strong> 31 August 2027 (Amavasya)</li>
+        <li><strong>तीसरा शाही स्नान:</strong> 11 Sept 2027 (Ekadashi)</li>
+        <li><strong>Alternate स्नान:</strong> 12 Sept 2027</li>
+        <li><strong>ध्वजावसान:</strong> 24 July 2028</li>
+      </ul>
+    </section>
+
+    <!-- About, Rituals, Attractions -->
     <section id="about">
       <h2>🕉️ About Kumbh Mela</h2>
-      <p>The Nashik Kumbh Mela 2027 is one of the largest spiritual congregations on Earth. Held every 12 years in Trimbakeshwar and along the sacred Godavari River, millions of pilgrims participate in rituals and take the holy dip to cleanse sins and seek divine blessings.</p>
+      <p>Kumbh Mela is a sacred pilgrimage where millions of devotees take the holy dip to cleanse sins and attain moksha.</p>
     </section>
 
     <section id="rituals">
-      <h2>🛕 Sacred Rituals</h2>
+      <h2>🛕 Rituals</h2>
       <ul>
-        <li>Shahi Snan (Royal Bath)</li>
-        <li>Peshwai Processions</li>
-        <li>Spiritual Discourses & Pravachans</li>
-        <li>Sadhu Darshan (Meeting Saints)</li>
+        <li>Shahi Snan</li>
+        <li>Peshwai</li>
+        <li>Darshan of Naga Sadhus</li>
+        <li>Spiritual Talks</li>
       </ul>
     </section>
 
     <section id="attractions">
       <h2>🗺️ Nearby Attractions</h2>
       <ul>
-        <li>Trimbakeshwar Jyotirlinga Temple</li>
-        <li>Panchavati & Sita Gufa</li>
-        <li>Muktidham Temple</li>
-        <li>Anjneri Hills (Hanuman's Birthplace)</li>
+        <li>Trimbakeshwar Temple</li>
+        <li>Panchavati</li>
+        <li>Muktidham</li>
+        <li>Anjneri</li>
       </ul>
-    </section>
-
-    <section id="languages">
-      <h2>🌐 Multilingual Help</h2>
-      <p>Get real-time support in English, Hindi, or Marathi to explore the event smoothly. More regional languages coming soon!</p>
     </section>
 
     <section id="faqs">
-      <h2>❓ Frequently Asked Questions</h2>
+      <h2>❓ FAQs</h2>
       <ul>
-        <li>📅 When is Kumbh Mela 2027 happening?</li>
-        <li>🚆 Best ways to reach Nashik?</li>
-        <li>🏨 Accommodation near Trimbakeshwar?</li>
-        <li>🥾 Essential things to carry?</li>
-        <li>⚕️ Are emergency medical facilities available?</li>
+        <li>When is Shahi Snan?</li>
+        <li>How to reach Nashik?</li>
+        <li>Where to stay?</li>
       </ul>
     </section>
-
-    <section id="bookings">
-      <h2>📦 Plan Your Journey</h2>
-      <ul>
-        <li><a href="#">Book Buses via RedBus</a></li>
-        <li><a href="#">Find Trains via ConfirmTkt</a></li>
-        <li><a href="#">Stay Options via Booking.com</a></li>
-        <li><a href="#">Buy Pooja Kits on Amazon</a></li>
-      </ul>
-    </section>
-
-    <!-- Future Additions: Travel Deals -->
-    <!--
-    <section id="deals">
-      <h2>🔥 Featured Travel Deals</h2>
-      <iframe src="https://www.booking.com/searchresults.html?aid=YOUR_ID&dest_id=-2104386&dest_type=city&checkin=2027-04-01&checkout=2027-04-10" width="100%" height="350"></iframe>
-    </section>
-    -->
   </main>
 
-  <!-- ✅ Live Chatbot Integration (Tawk.to) -->
+  <!-- 💬 Tawk.to Chatbot -->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -118,10 +160,15 @@
   </script>
 
   <footer>
-    <p>🙏 Powered by <strong>TechDaft</strong> | <a href="mailto:hello@techdaft.in">Contact Us</a></p>
-    <p>© 2025 <strong>KumbhBot</strong>. All rights reserved.</p>
+    <p>🚩 Powered by <strong>TechDaft</strong> | <a href="mailto:hello@techdaft.in">Contact Us</a></p>
+    <p>© 2025 <strong>KumbhBot</strong></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- 🌐 Language Switch JS -->
+  <script>
+    function switchLang(lang) {
+      alert("Language switched to: " + (lang === 'hi' ? 'हिन्दी' : lang === 'mr' ? 'मराठी' : 'English') + " (coming soon!)");
+    }
+  </script>
 </body>
 </html>
