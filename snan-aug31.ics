@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KumbhBot//ShahiSnan//EN
+BEGIN:VEVENT
+UID:second-snan@kumbhbot.in
+DTSTAMP:20250602T120000Z
+DTSTART;VALUE=DATE:20270831
+DTEND;VALUE=DATE:20270901
+SUMMARY:🛁 Second Shahi Snan – Amavasya
+DESCRIPTION:Second Royal Bath of Nashik Kumbh Mela 2027. Auspicious Amavasya Snan at Trimbakeshwar & Ramkund.
+LOCATION:Ramkund & Trimbakeshwar, Nashik
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
