@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KumbhBot//ShahiSnan//EN
+BEGIN:VEVENT
+UID:third-snan@kumbhbot.in
+DTSTAMP:20250602T120000Z
+DTSTART:20270911T023000Z
+DTEND:20270911T053000Z
+SUMMARY:Third Shahi Snan – Ekadashi
+DESCRIPTION:Final Shahi Snan of Nashik Kumbh Mela 2027 on Ekadashi. Massive participation by saints and devotees.
+LOCATION:Ramkund & Trimbakeshwar, Nashik
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

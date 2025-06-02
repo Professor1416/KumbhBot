@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KumbhBot//ShahiSnan//EN
+BEGIN:VEVENT
+UID:opening-dhwajarohan@kumbhbot.in
+DTSTAMP:20250602T120000Z
+DTSTART:20261031T023000Z
+DTEND:20261031T053000Z
+SUMMARY:🎉 Dhwajarohan – Opening Ceremony
+DESCRIPTION:Opening ceremony of Nashik Kumbh Mela 2027 with traditional flag hoisting at Ramkund.
+LOCATION:Ramkund, Nashik
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

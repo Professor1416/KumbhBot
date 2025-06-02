@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KumbhBot//ShahiSnan//EN
+BEGIN:VEVENT
+UID:akhada-dhwajarohan@kumbhbot.in
+DTSTAMP:20250602T120000Z
+DTSTART:20270724T023000Z
+DTEND:20270724T053000Z
+SUMMARY:🏳️ Akhada Dhwajarohan – Sadhugram
+DESCRIPTION:Flag hoisting ceremony by all Akhadas marking their arrival at the Mela grounds.
+LOCATION:Sadhugram, Nashik
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

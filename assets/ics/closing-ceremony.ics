@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KumbhBot//ShahiSnan//EN
+BEGIN:VEVENT
+UID:closing-dhwajavasaan@kumbhbot.in
+DTSTAMP:20250602T120000Z
+DTSTART:20280724T023000Z
+DTEND:20280724T053000Z
+SUMMARY:🔚 Dhwajavasaan – Closing Ceremony
+DESCRIPTION:Final ceremony of Nashik Kumbh Mela 2027. Flag lowering ritual signifying the end of Kumbh.
+LOCATION:Sadhugram or Ramkund, Nashik
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

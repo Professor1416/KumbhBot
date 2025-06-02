@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KumbhBot//ShahiSnan//EN
+BEGIN:VEVENT
+UID:alternate-snan@kumbhbot.in
+DTSTAMP:20250602T120000Z
+DTSTART:20270912T023000Z
+DTEND:20270912T053000Z
+SUMMARY:Alternate Snan – For General Devotees
+DESCRIPTION:Alternate Snan day for general devotees after Shahi Snan.
+LOCATION:Ramkund & Trimbakeshwar, Nashik
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
