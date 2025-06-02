@@ -4,65 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KumbhBot - Event Schedule</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Mukta', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffa726, #fb8c00);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #e65100;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #ffe0b2;
+      color: #4e342e;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    #countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+      border-radius: 12px;
+      animation: pulse 2s infinite;
+      color: #d84315;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,138,101, 0.4); }
+      50% { transform: scale(1.02); box-shadow: 0 0 20px rgba(255,138,101, 0.7); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,138,101, 0.4); }
+    }
+
+    footer {
+      text-align: center;
+      background: #ffe0b2;
+      color: #5d4037;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #e65100;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Kumbh Mela 2027 - Event Schedule</h1>
+    <h1>📿 Kumbh Mela 2027 - Event Schedule</h1>
     <p>Stay updated with all key rituals and events</p>
   </header>
 
   <main>
     <section>
       <h2>📅 Key Ritual Dates</h2>
-      <table border="1">
+      <table>
         <tr>
           <th>Date</th>
           <th>Event</th>
           <th>Details</th>
         </tr>
         <tr>
-          <td>July 14, 2027</td>
+          <td>February 26, 2027</td>
           <td>First Shahi Snan</td>
-          <td>Royal bathing ritual by Akharas</td>
+          <td>Royal bathing by Akharas begins the sacred ritual journey</td>
         </tr>
         <tr>
-          <td>July 27, 2027</td>
+          <td>March 14, 2027</td>
           <td>Second Shahi Snan</td>
-          <td>Most auspicious day for spiritual cleansing</td>
+          <td>Highly auspicious day for spiritual bath and blessings</td>
         </tr>
         <tr>
-          <td>August 11, 2027</td>
+          <td>March 30, 2027</td>
           <td>Third Shahi Snan</td>
-          <td>Final and grandest spiritual gathering</td>
+          <td>Final and largest spiritual gathering for moksha seekers</td>
         </tr>
       </table>
     </section>
 
     <section>
       <h2>⏳ Countdown to First Snan</h2>
-      <div id="countdown"></div>
+      <div id="countdown">Loading...</div>
     </section>
   </main>
 
   <footer>
-    <p>Powered by KumbhBot | <a href="index.html">Back to Home</a></p>
+    <p>🙏 Powered by <strong>KumbhBot</strong> | <a href="index.html">Back to Home</a></p>
   </footer>
 
   <script>
-    // Simple countdown
     const countdown = document.getElementById("countdown");
-    const targetDate = new Date("2027-07-14T00:00:00").getTime();
+    const targetDate = new Date("2027-02-26T00:00:00").getTime();
+
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate - now;
+
       if (distance < 0) {
-        countdown.innerHTML = "🕉️ The event has begun!";
+        countdown.innerHTML = "🕉️ The sacred journey has begun!";
         clearInterval(interval);
         return;
       }
+
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      countdown.innerHTML = `${days} days left for First Snan`;
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left until First Shahi Snan 🚿`;
     }, 1000);
   </script>
 </body>
