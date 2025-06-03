@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KumbhBot – Your 24×7 AI Guide to Nashik Kumbh Mela 2027</title>
-  <link rel="icon" href="icon.png" type="image/x-icon" />
+  <link rel="icon" href="./assets/images/icon.png" type="image/x-icon" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
 </head>
@@ -224,51 +224,46 @@
 </section>
 
 
-  <section id="faqs">
+<section id="faqs">
   <h2>❓ FAQs</h2>
-  <ul>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">When is Shahi Snan?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">How to reach Nashik?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">Where to stay?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">What are the timings for the Kumbh Mela events?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">How can I register for accommodation or camps?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">Is there a mobile app for the Nashik Kumbh Mela 2027?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">Are there any COVID-19 guidelines or health protocols?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">Where can I find local transport options during the festival?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">Can I volunteer at the Kumbh Mela? How?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">What safety measures are in place for pilgrims?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">How do I get a permit to visit restricted areas?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">What are the best places to eat during Kumbh Mela?</a></li>
-    <li><a href="#" class="faq-link disabled" onclick="openChat(); return false;">How can I donate or support the event?</a></li>
-  </ul>
 
-  <style>
-    .disabled {
-      pointer-events: none;
-      opacity: 0.5;
-      cursor: default;
-    }
-  </style>
+  <div class="faq">
+    <h3>📅 What are the most important dates of Kumbh Mela 2027?</h3>
+    <p>The key dates include the three Shahi Snan days: 2 Aug 2027 (Somvati Amavasya), 31 Aug 2027 (Amavasya), and 11 Sept 2027 (Ekadashi). Additional events like flag hoisting and closing ceremonies are also significant.</p>
+  </div>
 
-  <script>
-    function openChat() {
-      if (window.Tawk_API && typeof Tawk_API.toggle === 'function') {
-        Tawk_API.toggle();
-      } else {
-        setTimeout(openChat, 500);
-      }
-    }
+  <div class="faq">
+    <h3>🧭 How can I travel to Nashik for Kumbh Mela?</h3>
+    <p>You can reach Nashik by train, bus, or flight. The nearest airports are Mumbai and Pune. Nashik also has a railway station and excellent road connectivity via NH-60.</p>
+  </div>
 
-    var checkTawk = setInterval(function(){
-      if (window.Tawk_API && typeof Tawk_API.toggle === 'function') {
-        document.querySelectorAll('.faq-link.disabled').forEach(function(link){
-          link.classList.remove('disabled');
-        });
-        clearInterval(checkTawk);
-      }
-    }, 200);
-  </script>
+  <div class="faq">
+    <h3>🏕️ What are the accommodation options available?</h3>
+    <p>Visitors can choose from hotels, guesthouses, dharamshalas, government tent cities, or private camps. It’s best to book early due to high demand during the Mela.</p>
+  </div>
+
+  <div class="faq">
+    <h3>📜 How do I know the timings of key rituals and processions?</h3>
+    <p>You can check the official event schedule on the KumbhBot website or app, which provides updated timings for all major events, including Shahi Snan and Peshwai.</p>
+  </div>
+
+  <div class="faq">
+    <h3>📝 How do I register or book services like camps and tours?</h3>
+    <p>You can register for accommodation or guided tours through the official Kumbh Mela 2027 website, Maharashtra Tourism portal, or partner agencies announced by the government.</p>
+  </div>
+
 </section>
+
+<script>
+  document.querySelectorAll("#faqs h3").forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+      answer.style.display = (answer.style.display === "block") ? "none" : "block";
+    });
+  });
+</script>
+
+
 
 
   </main>
