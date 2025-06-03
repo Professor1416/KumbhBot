@@ -355,7 +355,7 @@ window.switchLang = function (lang) {
   {
     if (attractionItems[i]) attractionItems[i].textContent = item;
   });
-
+/*
     // FAQ rendering logic
 const faqContainer = document.querySelector("#faqs");
 document.querySelector("#faqs h2").textContent = t.faqsTitle[lang] || t.faqsTitle.en;
@@ -379,7 +379,7 @@ t.faqs.forEach(faq => {
   div.appendChild(a);
   faqContainer.appendChild(div);
 });
-
+*/
 
 
 };//End of switchLang
