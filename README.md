@@ -25,24 +25,43 @@
 KumbhBot/
 │
 ├── index.html # Home page
+
 ├── accommodation.html # Stay options & booking tips
+
 ├── event-schedule.html # Official dates, Snan, rituals
+
 ├── how-to-reach.html # Travel routes & directions
+
 ├── emergency.html # Key emergency contact info
+
 ├── dos-donts.html # Safety rules & prohibited actions
+
 ├── eco-tips.html # Sustainable travel practices
+
 ├── food-prasad.html # Local food, prasad & offerings
+
 │
+
 ├── assets/
+
 │ ├── css/style.css # Stylesheet for UI
+
 │ ├── js/lang.js # Language toggle script
+
 │ ├── js/countdown.js # Snan countdown timer
+
 │ ├── images/ # Icons, logos, festival images
+
 │ └── ics/ # Downloadable calendar events (.ics)
+
 │
+
 ├── script.js # Optional interactivity scripts
+
 ├── sitemap.xml # SEO sitemap
+
 ├── robots.txt # Bot crawler rules
+
 └── README.md # You’re reading it now!
 
 
