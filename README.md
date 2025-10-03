@@ -76,6 +76,72 @@ KumbhBot/
 
 ---
 
+
+## ⚙️ DevOps & Deployment (CI/CD Pipeline)
+
+* **Source Control**: Hosted on GitHub
+* **CI/CD Tool**: Jenkins pipeline automating build & deployment
+* **Containerization**: Dockerized using Nginx as a static web server
+* **Image Registry**: DockerHub for versioned images
+* **Cloud Hosting**: AWS EC2 (Ubuntu) instance running containerized KumbhBot
+* **Monitoring (Optional)**: Can be integrated with Prometheus & Grafana
+
+### 🔄 Workflow Architecture
+
+```text
+GitHub → Jenkins → Docker → DockerHub → AWS EC2 → KumbhBot App
+```
+
+<img width="1589" height="1010" alt="95c7c1e9-1d0d-44ec-a6e7-990d3890b8b7" src="https://github.com/user-attachments/assets/9fe318cb-d99e-4c4a-999d-87b2cfc60c72" />
+
+*(Architecture diagram showing CI/CD flow)*
+
+### 🐳 Dockerfile (Nginx-based for static site)
+
+```dockerfile
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
+```
+
+### 📜 Jenkinsfile (Pipeline Example)
+
+```
+pipeline {
+    agent any
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
+        IMAGE_NAME = "your-dockerhub-username/kumbhbot"
+    }
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/professor1416/KumbhBot.git'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:$BUILD_NUMBER .'
+            }
+        }
+        stage('Push to DockerHub') {
+            steps {
+                sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
+                sh 'docker push $IMAGE_NAME:$BUILD_NUMBER'
+            }
+        }
+        stage('Deploy on EC2') {
+            steps {
+                sh 'docker stop kumbhbot || true && docker rm kumbhbot || true'
+                sh 'docker run -d -p 8051:80 --name kumbhbot $IMAGE_NAME:$BUILD_NUMBER'
+            }
+        }
+    }
+}
+```
+
+----
+
 ## 🚀 How to Use / Contribute
 
 1. Visit the [Live Site](https://professor1416.github.io/KumbhBot/)
