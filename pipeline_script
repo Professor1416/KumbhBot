@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
+        IMAGE_NAME = "your-dockerhub-username/kumbhbot"
+    }
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/professor1416/KumbhBot.git'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:$BUILD_NUMBER .'
+            }
+        }
+        stage('Push to DockerHub') {
+            steps {
+                sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
+                sh 'docker push $IMAGE_NAME:$BUILD_NUMBER'
+            }
+        }
+        stage('Deploy on EC2') {
+            steps {
+                sh 'docker stop kumbhbot || true && docker rm kumbhbot || true'
+                sh 'docker run -d -p 8051:80 --name kumbhbot $IMAGE_NAME:$BUILD_NUMBER'
+            }
+        }
+    }
+}
