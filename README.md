@@ -152,15 +152,6 @@ pipeline {
 
 ---
 
-## 🙏 Credits
-
-Made with 💛 by **TechDaft Solutions**
-
-📧 Contact: [techdaftsolutions@gmail.com](mailto:techdaftsolutions@gmail.com)  
-🔗 Powered by: [TechDaft Solutions](https://www.linkedin.com/company/techdaft-solutions)
-
----
-
 ## 📜 License
 
 This project is licensed under the **MIT License** – feel free to use, modify, and share!
